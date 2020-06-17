@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
     font-size: 10px;
     background: #8E24AA;
-    background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%);
+    background: linear-gradient(45deg,  #E17575 0%,#E66565 50%,#E17373 100%);
 }
   
 *, *:before, *:after {
@@ -79,4 +79,22 @@ body {
 .display__end-time {
     font-size: 4rem;
     color: white;
+}
+
+.inner-display-container {
+    background-color: #DC5959;
+    height: 400px;
+    width: 560px;
+    padding: 30px;
+}
+
+.form-time-container {
+    height: 100px;
+}
+
+input {
+    height: 50px;
+    width: 200px;
+    border-color: unset;
+    border-radius: 5px;
 }
