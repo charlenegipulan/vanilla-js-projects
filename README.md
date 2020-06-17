@@ -1,1 +1,1 @@
-# vanilla-js-projects
+# Repo for my vanilla javascript mini projects
