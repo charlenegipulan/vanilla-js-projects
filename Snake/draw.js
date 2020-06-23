@@ -17,3 +17,8 @@ var snake;
     }, 250);
 }());
 
+window.addEventListener('keydown', ((evt) => {
+    console.log(evt);
+    const direction = evt.key.replace('Arrow', '');
+    snake.changeDirection(direction);
+}))
