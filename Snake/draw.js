@@ -20,6 +20,10 @@ var snake;
         if (snake.eat(fruit)) {
             fruit.pickLocation();
         } 
+
+        snake.checkCollision();
+        document.querySelector('.score').textContent = snake.total;
+        
     }, 250);
 }());
 

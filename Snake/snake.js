@@ -7,12 +7,11 @@ function Snake() {
     this.tail = [];
 
     this.draw = function() {
-        ctx.fillStyle = '#FFFFFF';
-
+        ctx.fillStyle = '#57954F';
+        //fill tail rectangles
         for (let i = 0; i < this.tail.length; i++) {
             ctx.fillRect(this.tail[i].x, this.tail[i].y, scale, scale); 
         }
-
         ctx.fillRect(this.x, this.y, scale, scale); 
     }
 
@@ -49,7 +48,6 @@ function Snake() {
             this.total++; //increment total after eating fruit
             return true;
         }
-
         return false;
     }
 
@@ -71,6 +69,16 @@ function Snake() {
                 this.xSpeed = scale * 1;
                 this.ySpeed = 0;
                 break;
+        }
+    }
+
+    this.checkCollision = function() {
+        for (var i = 0; i < this.tail.length; i++) {
+            // check if snake hits any of the already existing tail coordinates;
+            if (this.x === this.tail[i].x && this.y === this.tail[i].y) {
+                this.total = 0;
+                this.tail = [];
+            }
         }
     }
 }
