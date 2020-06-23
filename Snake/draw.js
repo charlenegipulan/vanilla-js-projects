@@ -16,6 +16,10 @@ var snake;
         fruit.draw();
         snake.update();
         snake.draw();
+
+        if (snake.eat(fruit)) {
+            fruit.pickLocation();
+        } 
     }, 250);
 }());
 
