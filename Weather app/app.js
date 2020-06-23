@@ -7,6 +7,9 @@ window.addEventListener('load', () => {
     let temperatureSection = document.querySelector('.temperature');
     let temperatureSpan = document.querySelector('.temperature span');
 
+    const searchbox = document.querySelector('.search-box');
+    searchbox.addEventListener('keypress', setQuery);
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
@@ -53,6 +56,17 @@ window.addEventListener('load', () => {
         const currentIcon = icon.replace(/-/g, '_').toUpperCase();
         skycons.play();
         return skycons.set(iconID, Skycons[currentIcon]);
+    }
+
+    function setQuery(e) {
+        if (e.keyCode == 13) {
+            getResults(searchbox.value);
+            console.log(searchbox.value);
+        }
+    } 
+
+    function getResults(query) {
+        
     }
 
 });
